@@ -2056,7 +2056,7 @@
             // The default bullet is a dash but others are possible.
             // This has nothing to do with the particular HTML bullet,
             // it's just a markdown bullet.
-            var bullet = "-";
+            var bullet = "*";
 
             // The number in a numbered list.
             var num = 1;
