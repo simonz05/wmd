@@ -3,40 +3,28 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>WMD Example</title>
-
 		<link rel="stylesheet" type="text/css" href="wmd.css"/>
-		<script src="wmd.js"></script>
-		<script src="showdown.js"></script>
-		<style type="text/css" media="screen">
-			textarea {width:100%;margin:0;}
-			textarea, #notes-preview {border:1px solid gray;height:100px;}
-			#notes-preview {overflow-x:hidden;overflow-y:scroll;}
-		</style>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+		<script type="text/javascript" src="wmd.js"></script>
 	</head>
 	<body>
 		<h1>WMD Example</h1>
 
 		<div>
-			<div id="notes-button-bar"></div>
-			<textarea id="notes"></textarea>
-
-			Preview:
-			<div id="notes-preview"></div>
-
-			Output:
-			<textarea type="text" name="copy_html" value="" id="copy_html"></textarea>
+			<div id="bar"></div>
+			<textarea id="input" cols="80" rows="10"></textarea>
+			<div id="output"></div>
 		</div>
 
 		<script type="text/javascript">
-			new WMDEditor({
-				input: "notes",
-				button_bar: "notes-button-bar",
-				preview: "notes-preview",
-				output: "copy_html",
-				buttons: "bold italic link  ol ul  heading",
-				modifierKeys: false,
-				autoFormatting: false
-			});
+            $('#id_{{ field_name }}').WMDEditor({
+                input: "input",
+                button_bar: "bar",
+                output: "output",
+                buttons: "bold italic link ol ul heading undo redo",
+                linkDialogText: "",
+                lineLength: 1000,
+            });
 		</script>
 	</body>
 </html>
