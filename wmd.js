@@ -626,15 +626,15 @@
 
         this.selection = this.selection.replace(/^(\s*)/, "");
 
-        if (!remove) {
-            this.before += re.$1;
-        }
+        //if (!remove) {
+        //    this.before += re.$1;
+        //}
 
         this.selection = this.selection.replace(/(\s*)$/, "");
 
-        if (!remove) {
-            this.after = re.$1 + this.after;
-        }
+        //if (!remove) {
+        //    this.after = re.$1 + this.after;
+        //}
     };
 
 
